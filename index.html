@@ -33,6 +33,13 @@
         font-size: 20;                
     }
 
+    .blue {
+        font-size: 16;
+        font-weight: bold;
+        text-align: center;
+        color: var(--hr-theme-blue);
+    }
+
     .button {        
         background-color: var(--hr-theme-blue);
         border: none;
@@ -64,14 +71,27 @@
         font-weight: bold;
     }
 
+    .form-control {
+        border: 1 !important;
+        border-radius: 16px !important;
+    }
+
     i {
         color: var(--hr-theme-white)
+    }
+
+    label {
+        font-weight: lighter !important;
     }
 
     nav .logo {        
         font-size: 48px;
         font-weight: bold;        
         padding: 15px;
+    }
+
+    p {
+        white-space: pre-line;
     }
 
     .social-links a {
@@ -91,6 +111,11 @@
         animation: wiggle 0.5s;    
         animation-iteration-count: infinite;
     }
+
+    input[type=text], .txtarea{
+margin-bottom: 10px;
+
+ }
 
     @keyframes wiggle {
         0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -119,18 +144,18 @@
         <div class="col-sm align-items-center">
             <h1>This is gonna be awesome!</h1>
             <p>
-                Hard Refresh has been building meaningful and impactful digital strategies since 2018. This year, we’re launching a ~new look~ with an emphasis on what we love most; equitable and sustainable web design! 
-Stay tuned, our new website launches in March 2023! 
-            </p>
-            <form id="demo-form">                
-                <p>Be the first to know when our new website is live:</p>
+                Hard Refresh has been building meaningful and impactful digital strategies since 2018. This year, we’re launching a new look with an emphasis on what we love most; <span class="blue">equitable and sustainable web design!</span>                
 
-                <input type="text" placeholder="Email"/>
+                Be the first to know we launch our new website!
+            </p>
+            <form id="newsletter-form">                               
+                <label class="control-label" for="newsletter-email">Email</label>
+                <input class="form-control" type="text" id="newsletter-email" />
                 <input type="submit" class="button" class="g-recaptcha" 
-                        data-sitekey="reCAPTCHA_site_key" 
+                        data-sitekey="6LexmdEkAAAAAOpFsu8SHpueLDXBIThtS4HE6QBn" 
                         data-callback='onSubmit' 
-                        data-action='submit'>
-                    Ready, Set GO!
+                        data-action='submit'
+                        value=" Ready, Set GO!">                   
             </input>
             
             </form>
@@ -142,10 +167,52 @@ Stay tuned, our new website launches in March 2023!
 
     <div class="row">
         <div class="col">
-            Contact Form
+            <p class="blue">
+                In The Meantime, Tell Us About The Impact You’d Like to Make! 
+            </p>
         </div>
     </div>
-    <div class="g-recaptcha" data-sitekey="6LexmdEkAAAAAOpFsu8SHpueLDXBIThtS4HE6QBn"></div>
+
+    <div class="row text-align-center">
+        <div class="col">            
+            <form>
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label class="control-label" for="first-name">First Name</label>
+                        <input class="form-control" id="first-name" type="text" />
+                    </div>
+                    <div class="form-group col-sm">
+                        <label class="control-label" for="last-name">First Name</label>
+                        <input class="form-control" id="last-name" type="text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label class="control-label" for="contact-email">Email</label>
+                        <input class="form-control" id="contact-email" type="text" />
+                    </div>
+                    <div class="form-group col-sm">
+                        <label class="control-label" for="website">Website</label>
+                        <input id="website" class="form-control" type="text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label class="control-label" for="impact">How Can We Help You Amplify Your Impact?</label>
+                        <textarea class="form-control" id="impact"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" class="button" class="g-recaptcha" 
+                data-sitekey="6LexmdEkAAAAAOpFsu8SHpueLDXBIThtS4HE6QBn" 
+                data-callback='onSubmit' 
+                data-action='submit'
+                value=" Ready, Set GO!">   
+                </div>                
+            </form>
+        </div>
+    </div>
+    
     <div class="row footer">
         <div class="col-sm">
             <address>
