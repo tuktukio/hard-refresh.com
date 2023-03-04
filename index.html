@@ -56,7 +56,7 @@
     }
 
     div {
-        padding: 25px;
+        padding: 10px;
     }
 
     .footer {
@@ -112,10 +112,6 @@
         animation-iteration-count: infinite;
     }
 
-    input[type=text], .txtarea{
-margin-bottom: 10px;
-
- }
 
     @keyframes wiggle {
         0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -148,16 +144,16 @@ margin-bottom: 10px;
 
                 Be the first to know we launch our new website!
             </p>
-            <form id="newsletter-form">                               
+            <form class="form-group" id="newsletter-form">                               
                 <label class="control-label" for="newsletter-email">Email</label>
                 <input class="form-control" type="text" id="newsletter-email" required/>
+                <br/>
                 <input type="submit" class="button" class="g-recaptcha" 
                         data-sitekey="6LexmdEkAAAAAOpFsu8SHpueLDXBIThtS4HE6QBn" 
                         data-callback='onSubmit' 
                         data-action='submit'
                         value=" Ready, Set GO!">                   
-            </input>
-            
+            </input>            
             </form>
         </div>      
         <div class="col-sm">
@@ -175,37 +171,49 @@ margin-bottom: 10px;
 
     <div class="row text-align-center">
         <div class="col">            
-            <form>
+            <form class="form-group mb-0" id="contact-form">
                 <div class="row">
                     <div class="form-group col-sm">
                         <label class="control-label" for="first-name" required>First Name</label>
-                        <input class="form-control" id="first-name" type="text" />
+                        <input class="form-control  has-validation" id="first-name" type="text" />
+                        <div class="invalid-feedback">
+                            Please tell us your name.
+                          </div>
                     </div>
                     <div class="form-group col-sm">
                         <label class="control-label" for="last-name" required>Last Name</label>
-                        <input class="form-control" id="last-name" type="text" />
+                        <input class="form-control has-validation " id="last-name" type="text" />
+                        <div class="invalid-feedback">
+                            Please tell us your name.
+                          </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm">
                         <label class="control-label" for="contact-email" required>Email</label>
-                        <input class="form-control" id="contact-email" type="text" />
+                        <input class="form-control  has-validation" id="contact-email" type="text" />
+                        <div class="invalid-feedback">
+                            Please include an email
+                          </div>
                     </div>
                     <div class="form-group col-sm">
                         <label class="control-label" for="website">Website</label>
-                        <input id="website" class="form-control" type="text" />
+                        <input id="website" class="form-control" type="text" />                       
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col">
                         <label class="control-label" for="impact" required>How Can We Help You Amplify Your Impact?</label>
                         <textarea class="form-control" id="impact"></textarea>
+                        <div class="invalid-feedback">
+                            Please tell us about your needs.
+                          </div>
                     </div>
                 </div>
                 <div class="row">
                     <input type="submit" class="button" class="g-recaptcha" 
                 data-sitekey="6LexmdEkAAAAAOpFsu8SHpueLDXBIThtS4HE6QBn" 
-                data-callback='onSubmit' 
+                data-callback='onContactSubmit' 
                 data-action='submit'
                 value=" Ready, Set GO!">   
                 </div>                
@@ -231,8 +239,12 @@ margin-bottom: 10px;
 </body>
 <script>
 
-    function onSubmit(token) {
-      document.getElementById("demo-form").submit();      
+    function onNewsletterSubmit(token) {
+      document.getElementById("newsletter-form").submit();      
+    }
+
+    function onContactSubmit(token) {
+        document.getElementById("contact-form").submit();      
     }
   </script>
  
