@@ -150,7 +150,7 @@ margin-bottom: 10px;
             </p>
             <form id="newsletter-form">                               
                 <label class="control-label" for="newsletter-email">Email</label>
-                <input class="form-control" type="text" id="newsletter-email" />
+                <input class="form-control" type="text" id="newsletter-email" required/>
                 <input type="submit" class="button" class="g-recaptcha" 
                         data-sitekey="6LexmdEkAAAAAOpFsu8SHpueLDXBIThtS4HE6QBn" 
                         data-callback='onSubmit' 
@@ -178,17 +178,17 @@ margin-bottom: 10px;
             <form>
                 <div class="row">
                     <div class="form-group col-sm">
-                        <label class="control-label" for="first-name">First Name</label>
+                        <label class="control-label" for="first-name" required>First Name</label>
                         <input class="form-control" id="first-name" type="text" />
                     </div>
                     <div class="form-group col-sm">
-                        <label class="control-label" for="last-name">First Name</label>
+                        <label class="control-label" for="last-name" required>Last Name</label>
                         <input class="form-control" id="last-name" type="text" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm">
-                        <label class="control-label" for="contact-email">Email</label>
+                        <label class="control-label" for="contact-email" required>Email</label>
                         <input class="form-control" id="contact-email" type="text" />
                     </div>
                     <div class="form-group col-sm">
@@ -198,7 +198,7 @@ margin-bottom: 10px;
                 </div>
                 <div class="row">
                     <div class="form-group col">
-                        <label class="control-label" for="impact">How Can We Help You Amplify Your Impact?</label>
+                        <label class="control-label" for="impact" required>How Can We Help You Amplify Your Impact?</label>
                         <textarea class="form-control" id="impact"></textarea>
                     </div>
                 </div>
