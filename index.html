@@ -61,7 +61,10 @@
 
     .footer {
         background-color: var(--hr-theme-black);        
-        color: var(--hr-theme-white);                              
+        color: var(--hr-theme-white);   
+        width: 100%;
+        max-width: 100%;
+        /* overflow-x: hidden;           /                 */
     }
 
     h1 {
@@ -92,6 +95,13 @@
 
     p {
         white-space: pre-line;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        gap: 25px;
     }
 
     .social-links a {
@@ -125,6 +135,15 @@
         80% { transform: translate(-1px, -1px) rotate(1deg); }
         90% { transform: translate(1px, 2px) rotate(0deg); }
         100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    @media (max-width: 450px) {
+        .social-links {
+            /* display: flex; */
+            text-align: left;
+            align-items: left;
+            justify-content: left;
+        }
     }
 </style>
 
@@ -221,8 +240,8 @@
         </div>
     </div>
     
-    <div class="row footer">
-        <div class="col-sm">
+    <div class="row footer justify-content-center align-items-center text-align-center">
+        <div class="col-sm justify-content-center align-items-center text-align-center">
             <address>
                 <span class="header">Hannah Fisher</span>
                 Seattle, WA
@@ -230,10 +249,12 @@
                 360-621-1462
             </address>            
         </div>    
-        <div class="col-sm align-items-center align-content-center justify-content-right social-links">                   
+        <div class="col-sm">
+            <div class="social-links d-flex">
                 <a href="#linkedin"><i class="fa-brands fa-linkedin fa-3x"></i></a>
                 <a href="#facebook"><i class="fa-brands fa-facebook fa-3x"></i></a>
-                <a href="#instagram"><i class="fa-brands fa-instagram fa-3x"></i></a>                                   
+                <a href="#instagram"><i class="fa-brands fa-instagram fa-3x"></i></a>         
+            </div>                          
         </div>           
     </div>    
 </body>
